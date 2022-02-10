@@ -11,7 +11,7 @@ namespace ElevenNote.Models
     public class CategoryDetail
     {
         [Display(Name = "Category ID")]
-        public int CategoryID { get; set; }
+        public int CategoryId { get; set; }
 
         [Display(Name = "Category Name")]
         public string CategoryName { get; set; }
