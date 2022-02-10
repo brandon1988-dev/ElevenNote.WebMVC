@@ -7,13 +7,13 @@ namespace ElevenNote.Data.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.4.4")]
-    public sealed partial class ElevenNote_Data : IMigrationMetadata
+    public sealed partial class starMethod : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(ElevenNote_Data));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(starMethod));
         
         string IMigrationMetadata.Id
         {
-            get { return "202202101249283_ElevenNote_Data"; }
+            get { return "202202102058281_starMethod"; }
         }
         
         string IMigrationMetadata.Source

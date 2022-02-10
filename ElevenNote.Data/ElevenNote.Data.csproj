@@ -59,9 +59,13 @@
   <ItemGroup>
     <Compile Include="Category.cs" />
     <Compile Include="IdentityModels.cs" />
-    <Compile Include="Migrations\202202101249283_ElevenNote_Data.cs" />
-    <Compile Include="Migrations\202202101249283_ElevenNote_Data.designer.cs">
-      <DependentUpon>202202101249283_ElevenNote_Data.cs</DependentUpon>
+    <Compile Include="Migrations\202202102048004_initMigration.cs" />
+    <Compile Include="Migrations\202202102048004_initMigration.designer.cs">
+      <DependentUpon>202202102048004_initMigration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202202102058281_starMethod.cs" />
+    <Compile Include="Migrations\202202102058281_starMethod.designer.cs">
+      <DependentUpon>202202102058281_starMethod.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Note.cs" />
@@ -72,8 +76,11 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202202101249283_ElevenNote_Data.resx">
-      <DependentUpon>202202101249283_ElevenNote_Data.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202202102048004_initMigration.resx">
+      <DependentUpon>202202102048004_initMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202202102058281_starMethod.resx">
+      <DependentUpon>202202102058281_starMethod.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

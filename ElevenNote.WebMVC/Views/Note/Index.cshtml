@@ -24,6 +24,9 @@
             @Html.DisplayNameFor(model => model.NoteId)
         </th>
         <th>
+            @Html.DisplayNameFor(model => model.IsStarred)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.Title)
         </th>
         <th>
@@ -38,6 +41,9 @@
             <td>
                 @Html.DisplayFor(modelItem => item.NoteId)
             </td>
+            <th>
+                @Html.DisplayFor(model => item.IsStarred, new { id = item.NoteId })
+            </th>
             <td>
                 @Html.DisplayFor(modelItem => item.Title)
             </td>
@@ -52,3 +58,29 @@
         </tr>
     }
 </table>
+@section scripts {
+    <script language="javascript" type="text/javascript">
+        $(document).ready(function () {
+            $("i[data-toggle = 'star']")
+                .css({ "cursor": "pointer" })
+                .click(function (e) {
+                    var target = $(e.target);
+                    var noteId = target.attr("data-id");
+                    var starSet = target.hasClass("glyphicon-star");
+
+                    $.ajax({
+                        method: starSet ? "DELETE" : "PUT",
+                        url: "/api/note/" + noteId + "/star",
+                        data: null
+                    })
+                        .done(function (r) {
+                            target.removeClass();
+                            target.addClass("glyphicon " + (starSet ? "glyphicon-star-empty" : "glyphicon-star"));
+                        })
+                        .fail(function (r) {
+                            alert("Failed to change star status");
+                        });
+                });
+        });
+    </script>
+}
