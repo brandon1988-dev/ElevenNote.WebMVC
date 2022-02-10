@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Category.cs" />
     <Compile Include="IdentityModels.cs" />
     <Compile Include="Migrations\202202101249283_ElevenNote_Data.cs" />
     <Compile Include="Migrations\202202101249283_ElevenNote_Data.designer.cs">
